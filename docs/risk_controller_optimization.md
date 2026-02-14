@@ -83,9 +83,4 @@ if (Order.Side == SELL) -> Check buySide_Map.find(Key)
 - [x] 确认成交/撤单逻辑中正确扣减了 `buySide_`/`sellSide_` 的计数。
 - [x] 编译无警告（CMake/MinGW环境）。
 
-## 截图/演示
-*(此处可附上手动测试运行器输出截图)*
-```
-[ RUN      ] RiskControllerTest.NoCrossTradeDifferentMarket
-[       OK ] RiskControllerTest.NoCrossTradeDifferentMarket
-```
+
