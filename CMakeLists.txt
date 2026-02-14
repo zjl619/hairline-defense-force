@@ -51,5 +51,10 @@ add_executable(unit_tests
 )
 target_link_libraries(unit_tests gtest_main trade_engine)
 
+# Standalone risk test with custom main function
+add_executable(risk_test_runner tests/risk_test_main.cpp)
+target_link_libraries(risk_test_runner gtest trade_engine)
+
 include(GoogleTest)
 gtest_discover_tests(unit_tests)
+gtest_discover_tests(risk_test_runner)
