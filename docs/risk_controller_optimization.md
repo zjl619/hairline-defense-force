@@ -10,7 +10,7 @@
 - **引入扁平化存储**：
     - `buySide_` / `sellSide_`：使用 `std::unordered_map<std::string, uint32_t>` 存储 `组合键 -> 该方向总挂单量`。
     - `orderMap_`：使用 `std::unordered_map<std::string, OrderInfo>` 维护订单维度的详细信息，用于撤单和成交时的快速回溯。
-- **OrderInfo 增强**：结构体中增加了 `price` 和 `remainingQty` 等字段，确保状态跟踪的完整性。
+- **OrderInfo 增强**：结构体中增加了 `market` 和 `ShareholderId` 等字段，确保状态跟踪的完整性。
 
 ### 2. 核心算法优化 (src/risk_controller.cpp)
 - **组合键生成 (`makeKey`)**：
