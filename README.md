@@ -51,8 +51,19 @@ sudo apt install ninja-build
 ### 运行测试
 
 ```bash
+# 运行所有单元测试
 cmake --build build --target unit_tests
 ./bin/unit_tests
+
+# 运行风控测试（独立可执行文件，包含自定义主函数）
+cmake --build build --target risk_test_runner
+./bin/risk_test_runner
+
+# 列出所有风控测试用例
+./bin/risk_test_runner --gtest_list_tests
+
+# 运行特定的风控测试用例
+./bin/risk_test_runner --gtest_filter="RiskControllerTest.CrossTradeDetectionSameShareholder"
 ```
 
 ### 运行示例
