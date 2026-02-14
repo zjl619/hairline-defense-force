@@ -78,7 +78,7 @@ class RiskController {
     };
 
     // 辅助函数：生成组合键
-    // Key: shareholderId + securityId + market
+    // Key: shareholderId + market + securityId
     std::string makeKey(const std::string &shareholderId, Market market,
                         const std::string &securityId);
 
