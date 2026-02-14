@@ -57,3 +57,4 @@ target_link_libraries(risk_test_runner gtest trade_engine)
 
 include(GoogleTest)
 gtest_discover_tests(unit_tests)
+gtest_discover_tests(risk_test_runner)
